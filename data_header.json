@@ -1,0 +1,96 @@
+{
+    "cim_base_url": "http://e-mon-cim-gv.t.em.wpd.com:8080",
+    "cim_notification_url": "gridim/derms/core/notifications",
+    "api_user": "AdminUser1",
+    "api_key": "09b61433dacf2f328bdf8b4a2cd62c4537032498a00e3d0fa3692dbe40e84042",
+    "control_timeout_ms": 30000,
+    "cim_pollrate_sec": 5,
+    "cim_notification_check_sec": 5,
+    "setpoint_round": 3,
+    "float_round": 3,
+    "supervisor_url": "http://e-app.t.em.wpd.com:8080/cluster/fepstatus",
+    "supervisor_id": "a58d606f-64ba-4d3b-b9df-a49c6ebd6110",
+    "fep_id": "8c7bc0ea-9dd4-4039-b871-3aeb6d14daa1",
+    "supervisor_timeout_msec": 10000,
+    "python_script_path": "/usr/bin/ziv_fep/fep_config/ziv_script.py.ziv",
+    "period_call_function": "periodicFEP(OdataApi)",
+    "period_time_s": 10,
+    "external_fep_ip_addr": "lamanmefeptem01.n.wpd.com",
+    "fep_port": 8888,
+    "fep_redundancy": 0,
+    "fep_redundancy_timeout_sec": 3,
+    "fep_redundancy_retries": 3,
+    "fep_redundancy_ip_addr": "lfep.cluster2.com",
+    "fep_redundancy_port": 8888,
+    "iccp": {
+        "fep_connection_list": [
+            {
+                "name": "CLIENTList",
+                "remote_vcc0": "EAST_MIDLANDS"
+            }
+        ],
+        "connection_data": [
+            {
+                "my_vcc": "POWERON",
+                "local_dom_0": "POWERON_ZIVCF",
+                "remote_vcc": "CLIENTList",
+                "remote_dom_client_vcc0": "ZIVEM_POWERON",
+                "bilateral_table_0": "ONE",
+                "assoc_out": 1,
+                "assoc_in": 0,
+                "client": 1,
+                "server": 1,
+                "bilateral_table_client_vcc0": "ONE",
+                "iccp_data_points_client_remote_vcc0": "/usr/bin/ziv_fep/fep_config/iccp_data_points_client.csv",
+                "iccp_tranfer_sets_client_vcc0": "/usr/bin/ziv_fep/fep_config/iccp_transfer_set.csv",
+                "iccp_data_points": "/usr/bin/ziv_fep/fep_config/iccp_data_points_server.csv",
+                "compatibility_mode": 2,
+                "tpdu_size": 2048,
+                "mms_mode": 0,
+                "iccp_features": "110010000000",
+                "iccp_secure": 0,
+                "iccp_cert": "/usr/bin/ziv_fep/fep_config/cert",
+                "iccp_key": "/usr/bin/ziv_fep/fep_config/key",
+                "iccp_ca": "/usr/bin/ziv_fep/fep_config/ca",
+                "tls_mms_depth": 9,
+                "iccp_password": "1234"
+            }
+        ],
+        "connection_parameters": [
+            {
+                "common_name": "EAST_MIDLANDS",
+                "ip_addr": "ploanmfepem01.n.wpd.com",
+                "port": 102,
+                "TSEL": "0x0001",
+                "SSEL": "0x0001",
+                "PSEL": "0x0001",
+                "ApTitle": "1.1.1.1.1.4",
+                "AeQualifier": 1
+            },
+            {
+                "common_name": "POWERON",
+                "ip_addr": "lamanmefeptem01.n.wpd.com",
+                "port": 102,
+                "TSEL": "0x0001",
+                "SSEL": "0x0001",
+                "PSEL": "0x0001",
+                "ApTitle": "1.1.1.1.1.2",
+                "AeQualifier": 1
+            }
+        ],
+        "init_values": {
+            "Data_RealQ": "{3.33,'00111000'b}",
+            "Data_RealQTimeTag": "{3.33,0,'00111001'b}",
+            "Data_State": "'00111000'b",
+            "Data_StateQ": "'00111000'b",
+            "Data_StateQTimeTag": "{0, '00111001'b}",
+            "Data_DiscreteQ": "{3, '00111000'b}",
+            "Data_DiscreteQTimeTag": "{3, 0, '00111001'b}"
+        },
+             "iccp_version": "2000,8"
+    },
+    "dnp3": {
+        "dnp3_outstations": [
+        ]
+    }
+}
