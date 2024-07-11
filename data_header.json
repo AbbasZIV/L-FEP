@@ -1,0 +1,171 @@
+{
+    "cim_base_url": "http://mon-cim-gv-ca.t.em.wpd.com:8080",
+    "cim_notification_url": "gridim/derms/core/notifications",
+    "api_user": "AdminUser1",
+    "api_key": "09b61433dacf2f328bdf8b4a2cd62c4537032498a00e3d0fa3692dbe40e84042",
+    "control_timeout_ms": 30000,
+    "cim_pollrate_sec": 5,
+    "cim_notification_check_sec": 5,
+    "setpoint_round": 3,
+    "float_round": 3,
+    "supervisor_url": "http://app-ca.t.em.wpd.com:8080/cluster/fepstatus",
+    "supervisor_id": "350d60c5-8df4-4efd-8e46-c91a56c304e2",
+    "fep_id": "c6237f23-7c9d-41ce-8ecc-9312278299f9",
+    "supervisor_timeout_msec": 10000,
+    "python_script_path": "/usr/bin/ziv_fep/fep_config/ziv_script.ziv",
+    "period_call_function": "periodicFEP(OdataApi)",
+    "period_time_s": 5,
+    "external_fep_ip_addr": "lfep-ca.t.em.wpd.com",
+    "fep_port": 8888,
+    "fep_redundancy": 1,
+    "fep_redundancy_timeout_sec": 3,
+    "fep_redundancy_retries": 3,
+    "fep_redundancy_ip_addr": "lfep-cb.t.em.wpd.com",
+    "fep_redundancy_port": 8888,
+    "iccp": {
+        "fep_connection_list": [
+            {
+                "name": "CLIENTList",
+                "remote_vcc0": "POWERON0",
+                "remote_vcc1": "POWERON1",
+                "remote_vcc2": "POWERON2",
+                "remote_vcc3": "POWERON3",
+                "remote_vcc4": "POWERON4",
+                "remote_vcc5": "POWERON5"
+            }
+        ],
+        "connection_data": [
+            {
+                "my_vcc": "EAST_MIDLANDS",
+                "local_dom_0": "ZIVEM_POWERON",
+                "remote_vcc": "CLIENTList",
+                "remote_dom_client_vcc0": "POWERON_ZIVWB",
+                "remote_dom_client_vcc1": "POWERON_ZIVCF",
+                "remote_dom_client_vcc2": "POWERON_ZIVSH",
+                "remote_dom_client_vcc3": "POWERON_ZIVGR",
+                "remote_dom_client_vcc4": "POWERON_ZIVEC",
+                "remote_dom_client_vcc5": "POWERON_ZIVED",
+                "bilateral_table_0": "ONE",
+                "assoc_out": 0,
+                "assoc_in": 1,
+                "client": 1,
+                "server": 1,
+                "bilateral_table_client_vcc0": "ONE",
+                "bilateral_table_client_vcc1": "ONE",
+                "bilateral_table_client_vcc2": "ONE",
+                "bilateral_table_client_vcc3": "ONE",
+                "bilateral_table_client_vcc4": "ONE",
+                "bilateral_table_client_vcc5": "ONE",
+                "iccp_data_points_client_remote_vcc0": "/usr/bin/ziv_fep/fep_config/iccp_data_points_client_wbur.csv",
+                "iccp_tranfer_sets_client_vcc0": "/usr/bin/ziv_fep/fep_config/iccp_transfer_set_wbur.csv",
+                "iccp_data_points_client_remote_vcc1": "/usr/bin/ziv_fep/fep_config/iccp_data_points_client_ches.csv",
+                "iccp_tranfer_sets_client_vcc1": "/usr/bin/ziv_fep/fep_config/iccp_transfer_set_ches.csv",
+                "iccp_data_points_client_remote_vcc2": "/usr/bin/ziv_fep/fep_config/iccp_data_points_client_stay.csv",
+                "iccp_tranfer_sets_client_vcc2": "/usr/bin/ziv_fep/fep_config/iccp_transfer_set_stay.csv",
+                "iccp_data_points_client_remote_vcc3": "/usr/bin/ziv_fep/fep_config/iccp_data_points_client_gren.csv",
+                "iccp_tranfer_sets_client_vcc3": "/usr/bin/ziv_fep/fep_config/iccp_transfer_set_gren.csv",
+                "iccp_data_points_client_remote_vcc4": "/usr/bin/ziv_fep/fep_config/iccp_data_points_client_ecla.csv",
+                "iccp_tranfer_sets_client_vcc4": "/usr/bin/ziv_fep/fep_config/iccp_transfer_set_ecla.csv",
+                "iccp_data_points_client_remote_vcc5": "/usr/bin/ziv_fep/fep_config/iccp_data_points_client_ende.csv",
+                "iccp_tranfer_sets_client_vcc5": "/usr/bin/ziv_fep/fep_config/iccp_transfer_set_ende.csv",
+                "iccp_data_points": "/usr/bin/ziv_fep/fep_config/iccp_data_points_server_emid.csv",
+                "compatibility_mode": 2,
+                "tpdu_size": 2048,
+                "mms_mode": 0,
+                "iccp_features": "110010000000",
+                "iccp_secure": 0,
+                "iccp_cert": "",
+                "iccp_key": "",
+                "iccp_ca": "",
+                "tls_mms_depth": 9,
+                "iccp_password": "1234"
+            }
+        ],
+        "connection_parameters": [
+            {
+                "common_name": "EAST_MIDLANDS",
+                "ip_addr": "lfep-ca.t.em.wpd.com",
+                "port": 102,
+                "TSEL": "0x0001",
+                "SSEL": "0x0001",
+                "PSEL": "0x0001",
+                "ApTitle": "1.1.1.1.1.4",
+                "AeQualifier": 1
+            },
+            {
+                "common_name": "POWERON0",
+                "ip_addr": "172.31.6.199",
+                "port": 102,
+                "TSEL": "0x0001",
+                "SSEL": "0x0001",
+                "PSEL": "0x0001",
+                "ApTitle": "1.1.1.1.1.2",
+                "AeQualifier": 1
+            },
+            {
+                "common_name": "POWERON1",
+                "ip_addr": "172.31.8.140",
+                "port": 102,
+                "TSEL": "0x0001",
+                "SSEL": "0x0001",
+                "PSEL": "0x0001",
+                "ApTitle": "1.1.1.1.1.2",
+                "AeQualifier": 1
+            },
+            {
+                "common_name": "POWERON2",
+                "ip_addr": "172.31.4.227",
+                "port": 102,
+                "TSEL": "0x0001",
+                "SSEL": "0x0001",
+                "PSEL": "0x0001",
+                "ApTitle": "1.1.1.1.1.2",
+                "AeQualifier": 1
+            },
+            {
+                "common_name": "POWERON3",
+                "ip_addr": "172.31.39.215",
+                "port": 102,
+                "TSEL": "0x0001",
+                "SSEL": "0x0001",
+                "PSEL": "0x0001",
+                "ApTitle": "1.1.1.1.1.2",
+                "AeQualifier": 1
+            },
+            {
+                "common_name": "POWERON4",
+                "ip_addr": "172.31.40.213",
+                "port": 102,
+                "TSEL": "0x0001",
+                "SSEL": "0x0001",
+                "PSEL": "0x0001",
+                "ApTitle": "1.1.1.1.1.2",
+                "AeQualifier": 1
+            },
+            {
+                "common_name": "POWERON5",
+                "ip_addr": "172.31.37.200",
+                "port": 102,
+                "TSEL": "0x0001",
+                "SSEL": "0x0001",
+                "PSEL": "0x0001",
+                "ApTitle": "1.1.1.1.1.2",
+                "AeQualifier": 1
+            }
+        ],
+        "init_values": {
+            "Data_RealQ": "{3.33,'00111000'b}",
+            "Data_RealQTimeTag": "{3.33,0,'00111001'b}",
+            "Data_State": "'00111000'b",
+            "Data_StateQ": "'00111000'b",
+            "Data_StateQTimeTag": "{0, '00111001'b}",
+            "Data_DiscreteQ": "{3, '00111000'b}",
+            "Data_DiscreteQTimeTag": "{3, 0, '00111001'b}"
+        },
+             "iccp_version": "2000,8"
+    },
+    "dnp3": {
+        "dnp3_outstations": [
+        ]
+    }
+}
